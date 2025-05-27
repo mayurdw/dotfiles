@@ -123,7 +123,7 @@ alias reload="source ~/.bashrc"
 alias cat="bat"
 # ---- Eza (better ls) -----
 
-alias ls="eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza -a -T --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
 # ---- Zoxide (better cd) ----
 eval "$(zoxide init bash)"
@@ -181,4 +181,3 @@ blue="#06BCE4"
 cyan="#2CF9ED"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
-
