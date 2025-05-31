@@ -121,11 +121,15 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 alias reload="source ~/.bashrc"
 alias cat="bat"
+alias bashrc="nvim ~/.bashrc"
+alias dotfiles="nvim ~/dotfiles/"
 # ---- Eza (better ls) -----
 
 alias ls="eza -a -T --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
 
+
 # ---- Zoxide (better cd) ----
+export _ZO_DOCTOR=0
 eval "$(zoxide init bash)"
 
 alias cd="z"
@@ -181,3 +185,12 @@ blue="#06BCE4"
 cyan="#2CF9ED"
 
 export FZF_DEFAULT_OPTS="--color=fg:${fg},bg:${bg},hl:${purple},fg+:${fg},bg+:${bg_highlight},hl+:${purple},info:${blue},prompt:${cyan},pointer:${cyan},marker:${cyan},spinner:${cyan},header:${cyan}"
+
+# Update the paths to the kitty and its icon in the kitty desktop file(s)
+sed -i "s|Icon=kitty|Icon=$(readlink -f ~)/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+# Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
+echo 'kitty.desktop' > ~/.config/xdg-terminals.list
+
+# ---- Zoxide (better cd) ----
+eval "$(starship init bash)"
