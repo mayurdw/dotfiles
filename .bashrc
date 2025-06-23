@@ -182,6 +182,11 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 
+#, Android settings path
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # ---- Zoxide (better cd) ----
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
