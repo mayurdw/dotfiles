@@ -1,0 +1,3 @@
+[submodule "ideavim"]
+	path = ideavim
+	url = git@github.com:mayurdw/ideavim.git
