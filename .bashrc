@@ -186,6 +186,7 @@ echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=$HOME/android-studio/jbr
 
 # ---- Zoxide (better cd) ----
 eval "$(starship init bash)"
