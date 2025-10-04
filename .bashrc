@@ -122,7 +122,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 alias reload="source ~/.bashrc"
 alias cat="bat"
 alias bashrc="nvim ~/.bashrc"
-alias dotfiles="nvim ~/dotfiles/"
+alias dotfiles="cd ~/dotfiles && nvim ~/dotfiles/"
 # ---- Eza (better ls) -----
 
 alias ls="eza -a -T --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
