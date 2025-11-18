@@ -123,6 +123,7 @@ alias reload="source ~/.bashrc"
 alias cat="bat"
 alias bashrc="nvim ~/.bashrc"
 alias dotfiles="cd ~/dotfiles && nvim ~/dotfiles/"
+alias fibre="cd ~/Code/Android/fibretracker/"
 # ---- Eza (better ls) -----
 
 alias ls="eza -a -T --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
