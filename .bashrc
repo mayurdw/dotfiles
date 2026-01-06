@@ -124,7 +124,7 @@ alias cat="bat"
 alias bashrc="nvim ~/.bashrc"
 alias dotfiles="cd ~/dotfiles && nvim ~/dotfiles/"
 alias fibre="cd ~/Code/Android/fibretracker/"
-alias upgrade="sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && brew update && brew upgrade"
+alias upgrade="sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoremove -y && brew update && brew upgrade"
 alias restart="sudo reboot now"
 # ---- Eza (better ls) -----
 
