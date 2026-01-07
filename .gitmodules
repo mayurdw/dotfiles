@@ -2,5 +2,5 @@
 	path = ideavim
 	url = git@github.com:mayurdw/ideavim.git
 [submodule "nvim"]
-	path = nvim/.config/nvim
+	path = nvim/dot-config/nvim
 	url = git@github.com:mayurdw/nvim.git
