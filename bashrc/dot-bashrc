@@ -185,12 +185,23 @@ sed -i "s|Exec=kitty|Exec=$(readlink -f ~)/.local/kitty.app/bin/kitty|g" ~/.loca
 # Make xdg-terminal-exec (and hence desktop environments that support it use kitty)
 echo 'kitty.desktop' > ~/.config/xdg-terminals.list
 
+# Node and NPM settings
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$PATH:/home/mayur/.nvm/nvm.sh
+
 #, Android settings path
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=$HOME/android-studio/jbr
+export PATH=$PATH:/home/mayur/.local/share/gem/ruby/3.3.0/bin
 
 # ---- Zoxide (better cd) ----
 eval "$(starship init bash)"
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
+
+export JAVA_HOME=/usr/local/jdk-21.0.2
+export PATH=$PATH:$JAVA_HOME/bin
+
+
