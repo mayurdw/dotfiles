@@ -126,6 +126,8 @@ alias dotfiles="cd ~/dotfiles && nvim ~/dotfiles/"
 alias fibre="cd ~/Code/Android/fibretracker/"
 alias upgrade="sudo apt update -y && sudo apt upgrade -y && sudo apt clean -y && sudo apt autoremove -y && brew update && brew upgrade"
 alias restart="sudo reboot now"
+alias code="cd ~/Code/"
+alias game="cd ~/Code/Game"
 # ---- Eza (better ls) -----
 
 alias ls="eza -a -T --level=2 --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions"
@@ -204,4 +206,5 @@ eval "$(starship init bash)"
 export JAVA_HOME=/usr/local/jdk-21.0.2
 export PATH=$PATH:$JAVA_HOME/bin
 
-
+# Created by `pipx` on 2026-10-01 13:51:58
+export PATH="$PATH:/home/mayur/.local/bin"
