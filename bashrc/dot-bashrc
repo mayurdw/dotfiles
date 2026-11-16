@@ -208,3 +208,6 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 # Created by `pipx` on 2026-10-01 13:51:58
 export PATH="$PATH:/home/mayur/.local/bin"
+
+# Rustup
+export PATH="$PATH:/home/mayur/.cargo/bin"
